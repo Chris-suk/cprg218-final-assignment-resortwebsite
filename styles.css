@@ -1,15 +1,497 @@
 * {
-    margin: 0;
-}
-a {
-    color: black;
     font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    margin: 2em;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-div {
+/*home page*/
+    #navlogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        margin-top: 1rem;
+        height: 4rem;
+    }
+
+    .nav a {
+        display: block;
+        height: 2rem;
+        flex-wrap: wrap;
+        text-decoration: none;
+        text-align: center;
+        color: black;
+    }
+
+    .hero {
+        text-align: center;
+        color: white;
+        background-image: url(images/hero.jpg);
+        padding: 4rem;
+        background-size: cover;
+        position: relative;
+    }
+
+    .hero p {
+        padding: 2rem;
+    }
+
+    .hero .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 0;
+    }
+
+    .hero > *:not(.overlay) {
+        position: relative;
+        z-index: 1;
+    }
+
+    .logocontainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .experience {
+        display: grid;
+        text-align: center;
+        margin: 1.5rem;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .experiencesection {
+        padding: 1rem;
+        background-color: #E3D9C6;
+        border-radius: 10px;
+        margin-bottom: 0.5rem;
+    }
+
+    .homepageroom {
+        margin: 2rem;
+        text-align: center;
+    }
+
+    .hroombutton {
+        background-color: #F6CEC1;
+        border: 0;
+        padding: 0.5rem;
+        border-radius: 10px;
+    }
+
+    video {
+        text-align: center; 
+        max-width: 100%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    #hroomlist {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hometestimonials {
+        text-align: center;
+        margin: 6rem;
+    }
+
+    #readmore {
+        text-decoration: none;
+        color: black;
+        padding: 0.8rem;
+        background-color: #E3D9C6;
+        border-radius: 10px;
+    }
+
+    .guest {
+        margin: 2rem;
+    }
+
+    #readmore {
+        float: right;
+    }
+
+/*accommodation*/ 
+    .accommodation {
+        text-align: center;
+        margin: 2rem;
+    }
+
+    .room {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .roomcontainer img {
+        max-width: 100%;
+    }
+
+    .roommenu {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #roommenu li {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .roomcontainer button {
+        padding: 0.5rem;
+        border: 0;
+        border-radius: 10px;
+        background-color: #F6CEC1;
+        width: 10%;
+    }
+
+/*testimonials*/ 
+
+    #review {
+        text-align: center;
+        padding: 2rem;
+    }
+
+    #review h2 {
+        margin-bottom: 2rem;
+    }
+
+    #review h3 {
+        margin-bottom: 1rem;
+    }
+
+    #review p {
+        margin-bottom: 2rem;
+        background-color: #E3D9C6;
+        padding: 2rem;
+        border-radius: 10px;
+    }
+
+    #review h4 {
+        padding: 1rem;
+    }
+
+/*dining*/
+
+    #dining {
     text-align: center;
+    margin: 2rem;
+    }
+
+    #dining h2 {
+    margin-bottom: 2rem;
+    }
+
+    .restaurants {
+        margin: 2rem;
+    }
+
+    .restaurants h3 {
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .dininglist {
+        margin-top: 1rem;
+    }
+
+    .restaurants img {
+        display: block;
+        margin: auto;
+        margin-top: 2rem;
+    }
+
+    
+   
+
+/*spa*/
+    #spa {
+        text-align: center;
+        margin: 2rem;
+    }
+
+    .massage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .massage img {
+        max-width: 100%;
+    }
+
+    #massagemenu {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #massagemenu li {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .facial {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .facial img {
+        max-width: 100%;
+    }
+
+    #facialmenu {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #facialmenu li {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    #bodymenu {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #bodymenu li {
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+/*Activities*/ 
+
+    #activities {
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .onsite {
+        text-align: center;
+        padding: 2rem;
+        background-color: #F6CEC1;
+        margin: 2rem 2rem;
+        border-radius: 12px;
+    }
+    
+    .onsite h3 {
+        padding: 1rem;
+    }
+
+    .actlist li{
+        list-style-type: none;
+        margin-top: 1rem;
+    }
+
+    #local {
+        text-align: center;
+        padding: 2rem;
+        margin: 2rem 2rem;
+        border-radius: 12px;
+        background-color: rgb(143, 177, 159);
+    }
+
+    #local h3 {
+        margin-bottom: 2rem;
+    }
+
+    #cultural {
+        text-align: center;
+        padding: 2rem;
+        margin: 2rem 2rem;
+        border-radius: 12px;
+        background-color: rgb(255, 219, 158);
+    }
+
+    #adventure {
+        text-align: center;
+        padding: 2rem;
+        margin: 2rem 2rem;
+        border-radius: 12px;
+        background-color: rgb(194, 225, 231);
+    }
+
+    #booking {
+        text-align: center;
+        padding: 2rem;
+        margin: 2rem 2rem;
+        border-radius: 12px;
+        background-color: #E3D9C6;
+    }
+
+
+
+
+
+
+
+/*footer*/ 
+    footer {
     padding: 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    background-color: #E7D9C7;
+    }
+
+    .footerbottom {
+        margin-top: 2rem;
+    }
+
+@media screen and (min-width: 600px) {
+    .nav {
+        justify-content: center;
+        padding: 1rem;
+        display: flex;
+        gap: 2rem;
+    }
+
+    .experience {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .homepageroom {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left; 
+        gap: 3rem;
+        padding: 2rem;
+        flex-wrap: wrap;
+    }
+
+    #hroomlist {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .homepageroom {
+        display: flex;
+    }
+
+    .room {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 2rem;
+        text-align: left;
+    }
+    
+    .room img {
+        max-width: 400px;
+        height: auto;
+    }
+    
+    .room > *:not(img) {
+        flex: 1;
+    }
+    
+    .roommenu {
+        padding: 2rem;
+        list-style-type: none;
+    }
+
+    .roommenu li {
+        margin-bottom: 0.8rem;
+       padding-left: 2rem;
+       background-image: url(images/favicon.png);
+       background-position: 0 0;
+        background-size: 1.6rem 1.6rem;
+        background-repeat: no-repeat;
+    }
+    
+    .roombutton {
+        margin-top: 1.5rem;
+    }
+
+    .onsite {
+        text-align: center;
+        padding: 2rem;
+        background-color: #F6CEC1;
+        margin: 2rem 4rem;
+        border-radius: 12px;
+    }
+
+    #local {
+        text-align: center;
+        padding: 2rem;
+        margin: 2rem 4rem;
+        border-radius: 12px;
+        background-color: rgb(143, 177, 159);
+    }
+
+    #cultural {
+        text-align: center;
+        padding: 2rem;
+        margin: 2rem 4rem;
+        border-radius: 12px;
+        background-color: rgb(255, 219, 158);
+    }
+
+    #adventure {
+        text-align: center;
+        padding: 2rem;
+        margin: 2rem 4rem;
+        border-radius: 12px;
+        background-color: rgb(194, 225, 231);
+    }
+
+    #booking {
+        text-align: center;
+        padding: 2rem;
+        margin: 2rem 4rem;
+        border-radius: 12px;
+    }
+
 }
 
+@media screen and (min-width: 900px) {
+    .nav {
+        justify-content: center;
+        padding: 1rem;
+        display: flex;
+        gap: 2rem;
+    }
+
+    .experience {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+}
